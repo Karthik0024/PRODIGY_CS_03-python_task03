@@ -23,14 +23,9 @@ def check_password_strength(password):
     else:
         strength = "Very Weak"
     
-    # Print criteria and results
-    print(f"Password Length (>=8): {length_criteria}")
-    print(f"Contains Digit: {digit_criteria}")
-    print(f"Contains Uppercase: {uppercase_criteria}")
-    print(f"Contains Lowercase: {lowercase_criteria}")
-    print(f"Contains Special Character (@#$%^&+=): {special_character_criteria}")
-    print(f"Password Strength: {strength}")
+    return strength
 
 # Take password input from the user
 password = input("Enter your password: ")
-check_password_strength(password)
+strength = check_password_strength(password)
+print(f"Password Strength: {strength}")
